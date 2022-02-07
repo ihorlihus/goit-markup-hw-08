@@ -3,17 +3,27 @@
 }
 
 .nav__logo {
-  width: 145px;
+  // width: 145px;
   height: 31px;
   left: 215px;
   top: 24px;
 
   font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1, 19;
+  font-size: 24px;
+  line-height: 1, 17;
+  letter-spacing: 0.03em;
 
   color: var(--hover-color);
+}
+
+.nav__logo--right {
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.nav__logo--left {
+  margin: 0 auto 0 0;
 }
 
 .nav__dark {
