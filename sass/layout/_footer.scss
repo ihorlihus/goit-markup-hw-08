@@ -5,41 +5,75 @@
 }
 
 .footer__container {
-  // display: flex;
-  // align-items: baseline;
-
   display: block;
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__adress {
   // margin-right: 70px;
   display: block;
   margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
 }
 
 .footer__adress--logo {
   display: flex;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: 0%;
+  }
 }
 
 .footer__adress-list {
-  // display: flex;
-  // flex-direction: column;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    display: flex;
+    text-align: start;
+  }
 }
 
 .footer__adress-item {
-  display: flex;
-  margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: 9px;
   }
 }
 
 .footer__address-map-link {
-  display: flex;
   font-style: normal;
   font-size: 14px;
   line-height: 1.17;
