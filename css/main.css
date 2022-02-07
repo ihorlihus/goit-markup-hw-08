@@ -39,13 +39,12 @@ main {
   list-style: none;
 }
 
-.link {
+link {
   text-decoration: none;
 }
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -130,9 +129,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
 }
 
@@ -204,9 +200,6 @@ img {
 }
 
 .follow-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -225,7 +218,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .follow-input {
-    display: inline-block;
+    text-align: left;
     margin: 0;
   }
 }
@@ -237,6 +230,19 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+}
+
+.follow-input__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -261,6 +267,12 @@ img {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .follow-input__field {
+    width: 358px;
+  }
 }
 
 .follow-input__field--light {
@@ -685,9 +697,10 @@ img {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .button__footer {
     margin: 0;
+    margin-left: 12px;
   }
 }
 
@@ -772,6 +785,12 @@ img {
   cursor: pointer;
 }
 
+@media screen and (min-width: 480px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 .mobile-menu__icon {
   width: 40px;
   height: 40px;
@@ -788,11 +807,16 @@ img {
 }
 
 .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0, 215px, 0, auto;
-  padding: 0;
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
 }
 
 .nav__item:not(:first-child) {
@@ -924,15 +948,41 @@ img {
   background-size: cover;
 }
 
+@media screen and (min-width: 480px) {
+  .hero {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+  }
+}
+
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   color: var(--title-color);
   margin: auto;
-  width: 696px;
+  width: 360px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1259,12 +1309,12 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1291,10 +1341,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__adress {
-    width: calc(100% / 4 - 30px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1331,18 +1380,6 @@ img {
           flex-direction: column;
   margin: 0 auto;
   text-align: center;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__adress-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 @media screen and (min-width: 1200px) {

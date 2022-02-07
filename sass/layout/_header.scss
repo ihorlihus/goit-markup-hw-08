@@ -23,6 +23,10 @@
   background-color: #ffffff;
   border: none;
   cursor: pointer;
+
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
 }
 
 .mobile-menu__icon {
@@ -37,9 +41,12 @@
 }
 
 .nav__list {
-  display: flex;
-  margin: 0, 215px, 0, auto;
-  padding: 0;
+  display: none;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    // margin: 0, 215px, 0, auto;
+    padding: 0;
+  }
 }
 
 .nav__item:not(:first-child) {
