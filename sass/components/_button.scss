@@ -73,13 +73,18 @@
 
 .button__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 50px;
+  @media screen and (min-width: 600px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
-.button__item:not(:first-child) {
-  margin-left: 8px;
+.button__item {
+  margin: 4px;
+  width: content;
 }
 
 .button__portfolio {

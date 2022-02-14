@@ -10,11 +10,17 @@
 .product-card {
   width: 100%;
   // max-width: 450px;
-  margin-bottom: 30px;
+  margin: 15px;
+  @media screen and (min-width: 480px) {
+    width: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 3 - 30px);
+  }
   &__link {
     color: var(--main-text-color);
     width: 100%;
-    max-width: 450px;
+    // max-width: 450px;
 
     &:hover .product-card__subtext {
       display: block;
@@ -34,15 +40,14 @@
 }
 
 .product-card__image {
-  display: flex;
-
   position: relative;
   overflow: hidden;
+  object-fit: contain;
   width: 100%;
 }
 
 .product-card__subtext-position {
-  display: block;
+  display: flex;
   width: 100%;
   font-size: 18px;
   line-height: 1.56;
