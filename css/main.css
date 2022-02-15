@@ -979,7 +979,7 @@ img {
   height: 80px;
 }
 
-.mobile-menu {
+.menu-open-btn {
   width: 40px;
   height: 40px;
   -webkit-box-align: center;
@@ -991,7 +991,7 @@ img {
 }
 
 @media screen and (min-width: 600px) {
-  .mobile-menu {
+  .menu-open-btn {
     display: none;
   }
 }
@@ -999,6 +999,120 @@ img {
 .mobile-menu__icon {
   width: 40px;
   height: 40px;
+}
+
+.mob-menu {
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mob-menu__container {
+  position: relative;
+  padding: 48px 40px;
+  top: 0;
+  height: calc(100% - 98px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-close-btn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 385px;
+  background: var(--main-bg-color);
+  border-radius: 50%;
+  border: none;
+  -webkit-transition: fill 250ms linear;
+  transition: fill 250ms linear;
+}
+
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--hover-color);
+}
+
+.mob-menu__list {
+  margin-bottom: 70px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #212121;
+  margin-bottom: 32px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--animation-timing-function);
+          transition-timing-function: var(--animation-timing-function);
+}
+
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--button-color);
+  outline: none;
+}
+
+.mob-menu__contacts-mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  display: block;
+  margin-bottom: 32px;
+}
+
+.mob-menu__contacts-tel {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: block;
+  margin-bottom: 64px;
+}
+
+.mob-menu__follow-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mob-menu__follow-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .hero {

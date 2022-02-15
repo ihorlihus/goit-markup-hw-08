@@ -20,12 +20,6 @@
                         <span class="nav__logo">Web</span>
                         <span class="nav__logo nav__dark">Studio</span>
                     </a>
-                    <button type="button" class="mobile-menu">
-                        <svg class="mobile-menu__icon">
-                            <use href="./images/symbol-defs.svg#icon-menu_40px">
-                            </use>
-                        </svg>
-                    </button>
                     <ul class="list nav__list">
                         <li class="nav__item">
                             <a class="link nav__activ page" 
@@ -68,7 +62,75 @@
                             </a>
                         </li>
                     </ul>
-                </div>                    
+                </div> 
+                <button type="button" class="menu-open-btn" data-menu-open>
+                    <svg class="mobile-menu__icon">
+                        <use href="./images/symbol-defs.svg#icon-menu_40px">
+                        </use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mob-menu is-hidden" data-menu>                
+                <div class="mob-menu__container">
+                    <button type="button" class="menu-close-btn" data-menu-close>
+                        <use><svg class="close-icon">
+                                <use href="./images/symbol-defs.svg#icon-close">
+                                </use>
+                            </svg>
+                    </button>
+                    <div class="mob-menu-top">
+                    <ul class="list mob-menu__list">
+                        <li class="mob-menu__item">
+                            <a class="link mob-menu__link" href="./index.html">
+                                Студия
+                            </a>
+                        </li>
+                        <li class="mob-menu__item">
+                            <a class="link mob-menu__link" href="./portfolio.html">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="mob-menu__item">
+                            <a class="link mob-menu__link" href="https://ihorlihus.github.io/goit-markup-hw-07/">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="mob-menu__contacts-follow">
+                        <a class="link mob-menu__contacts-mail" 
+                                href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        <a class="link mob-menu__contacts-tel" 
+                                href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>                    
+                    <ul class="list mob-menu__follow-list">
+                        <li class="mob-menu__follow-item">
+                            <a class="link mob-menu__follow-link" 
+                                href="">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mob-menu__follow-item">
+                            <a class="link mob-menu__follow-link" href="">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="mob-menu__follow-item">
+                            <a class="link mob-menu__follow-link" href="">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mob-menu__follow-item">
+                            <a class="link mob-menu__follow-link" href="">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
             </div>
         </header>
         <main>
@@ -591,5 +653,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/mobil-menu.js"></script>
     </body>
 </html>
