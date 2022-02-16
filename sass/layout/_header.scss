@@ -135,6 +135,14 @@
 .mob-menu__follow-list {
   display: flex;
 }
+
+.mob-menu__follow-item {
+  padding: 0 10px;
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
 .mob-menu__follow-link {
   font-weight: 500;
   font-size: 18px;
